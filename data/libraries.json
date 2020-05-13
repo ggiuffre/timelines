@@ -70,10 +70,52 @@
 		"tags": ["Python", "linear algebra"]
 	},
 	{
+		"name": "PyTest",
+		"type": "library",
+		"birth": 2004,
+		"languages": ["Python"],
+		"tags": ["Python", "testing"]
+	},
+	{
 		"name": "pandas",
 		"type": "library",
 		"birth": 2008,
 		"languages": ["Python"],
 		"tags": ["Python", "statistics"]
+	},
+	{
+		"name": "scipy",
+		"type": "library",
+		"birth": 2001,
+		"languages": ["Python"],
+		"tags": ["Python", "scientific computing"]
+	},
+	{
+		"name": "Matplotlib",
+		"type": "library",
+		"birth": 2003,
+		"languages": ["Python"],
+		"tags": ["Python", "plotting"]
+	},
+	{
+		"name": "scikit-learn",
+		"type": "library",
+		"birth": 2007,
+		"languages": ["Python"],
+		"tags": ["Python", "machine learning", "statistics"]
+	},
+	{
+		"name": "NLTK",
+		"type": "library",
+		"birth": 2001,
+		"languages": ["Python"],
+		"tags": ["Python", "machine learning", "linguistics"]
+	},
+	{
+		"name": "SpaCy",
+		"type": "library",
+		"birth": 2015,
+		"languages": ["Python"],
+		"tags": ["Python", "machine learning", "linguistics"]
 	}
 ]

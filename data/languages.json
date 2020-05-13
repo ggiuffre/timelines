@@ -12,6 +12,12 @@
 		"tags": ["C++", "OOP"]
 	},
 	{
+		"name": "MATLAB",
+		"type": "language",
+		"birth": 1984,
+		"tags": ["MATLAB", "scientific computing"]
+	},
+	{
 		"name": "Java",
 		"type": "language",
 		"birth": 1995,
