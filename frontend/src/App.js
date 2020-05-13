@@ -8,6 +8,10 @@ class App extends React.Component {
     this.state = {technologies: [], topic: ''};
     this.updateSubject = this.updateSubject.bind(this);
     this.updateTimeline = this.updateTimeline.bind(this);
+    fetch('/timeline/tags')
+      .then(res => res.json())
+      .then(tags => tags.map(tag => <option value={tag} />))
+      .then(options => this.options = options);
   }
 
   componentDidMount() {
@@ -34,8 +38,12 @@ class App extends React.Component {
             value={this.state.topic}
             onChange={this.updateSubject}
             placeholder="web, Python, OOP..."
+            list="topics"
           />
         </label>
+        <datalist id="topics">
+          {this.options}
+        </datalist>
         <button type="button" onClick={this.updateTimeline}>Submit</button>
       </form>
       <Timeline techs={this.state.technologies} />
