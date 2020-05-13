@@ -1,0 +1,79 @@
+[
+	{
+		"name": "FastAPI",
+		"type": "library",
+		"birth": 2018,
+		"languages": ["Python"],
+		"tags": ["Python", "web", "back-end"]
+	},
+	{
+		"name": "Django",
+		"type": "library",
+		"birth": 2005,
+		"languages": ["Python"],
+		"tags": ["Python", "web", "back-end"]
+	},
+	{
+		"name": "Flask",
+		"type": "library",
+		"birth": 2010,
+		"languages": ["Python"],
+		"tags": ["Python", "web", "back-end"]
+	},
+	{
+		"name": "React",
+		"type": "library",
+		"birth": 2013,
+		"languages": ["JavaScript"],
+		"tags": ["JavaScript", "web", "front-end"]
+	},
+	{
+		"name": "AngularJS",
+		"type": "library",
+		"birth": 2010,
+		"languages": ["JavaScript"],
+		"tags": ["JavaScript", "web", "front-end"]
+	},
+	{
+		"name": "Vue.js",
+		"type": "library",
+		"birth": 2014,
+		"languages": ["JavaScript"],
+		"tags": ["JavaScript", "web", "front-end"]
+	},
+	{
+		"name": "Spring",
+		"type": "library",
+		"birth": 2002,
+		"languages": ["Java"],
+		"tags": ["Java", "web", "back-end"]
+	},
+	{
+		"name": "Laravel",
+		"type": "library",
+		"birth": 2011,
+		"languages": ["PHP"],
+		"tags": ["PHP", "web", "back-end"]
+	},
+	{
+		"name": "TensorFlow",
+		"type": "library",
+		"birth": 2015,
+		"languages": ["C", "C++", "Python", "Java", "Go", "JavaScript", "Swift"],
+		"tags": ["C", "C++", "Python", "Java", "Go", "JavaScript", "Swift", "machine learning"]
+	},
+	{
+		"name": "NumPy",
+		"type": "library",
+		"birth": 1995,
+		"languages": ["Python"],
+		"tags": ["Python", "linear algebra"]
+	},
+	{
+		"name": "pandas",
+		"type": "library",
+		"birth": 2008,
+		"languages": ["Python"],
+		"tags": ["Python", "statistics"]
+	}
+]

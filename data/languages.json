@@ -1,0 +1,62 @@
+[
+	{
+		"name": "C",
+		"type": "language",
+		"birth": 1972,
+		"tags": ["C"]
+	},
+	{
+		"name": "C++",
+		"type": "language",
+		"birth": 1985,
+		"tags": ["C++", "OOP"]
+	},
+	{
+		"name": "Java",
+		"type": "language",
+		"birth": 1995,
+		"tags": ["Java", "OOP"]
+	},
+	{
+		"name": "Scala",
+		"type": "language",
+		"birth": 2004,
+		"tags": ["Scala"]
+	},
+	{
+		"name": "Kotlin",
+		"type": "language",
+		"birth": 2011,
+		"tags": ["Kotlin", "mobile"]
+	},
+	{
+		"name": "JavaScript",
+		"type": "language",
+		"birth": 1997,
+		"tags": ["JavaScript", "scripting"]
+	},
+	{
+		"name": "Haskell",
+		"type": "language",
+		"birth": 1990,
+		"tags": ["Haskell", "functional programming"]
+	},
+	{
+		"name": "PHP",
+		"type": "language",
+		"birth": 1995,
+		"tags": ["PHP", "scripting"]
+	},
+	{
+		"name": "Python",
+		"type": "language",
+		"birth": 1990,
+		"tags": ["Python", "scripting"]
+	},
+	{
+		"name": "Swift",
+		"type": "language",
+		"birth": 2014,
+		"tags": ["Swift", "mobile"]
+	}
+]
