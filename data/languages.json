@@ -30,16 +30,28 @@
 		"tags": ["languages", "HTML", "markup", "web"]
 	},
 	{
+		"name": "XML",
+		"type": "language",
+		"birth": 1996,
+		"tags": ["languages", "XML", "markup", "web"]
+	},
+	{
 		"name": "CSS",
 		"type": "language",
 		"birth": 1996,
 		"tags": ["languages", "CSS", "web"]
 	},
 	{
+		"name": "SQL",
+		"type": "language",
+		"birth": 1974,
+		"tags": ["languages", "SQL", "databases"]
+	},
+	{
 		"name": "MATLAB",
 		"type": "language",
 		"birth": 1984,
-		"tags": ["languages", "MATLAB", "scientific computing"]
+		"tags": ["languages", "MATLAB", "scientific computing", "OOP"]
 	},
 	{
 		"name": "Java",
