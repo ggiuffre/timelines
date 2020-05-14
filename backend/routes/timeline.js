@@ -5,18 +5,18 @@ const dbOptions = {useNewUrlParser: true, useUnifiedTopology: true};
 const client = new MongoClient(url, dbOptions);
 
 function findTech(db, query) {
-  const collection = db.collection('techs');
-  return collection.find(query).toArray();
+  return db.collection('techs')
+    .find(query)
+    .toArray();
 }
 
 function getTags(db) {
   return db.collection('techs')
-    .find({}, {_id: false, tags: true})
+    .aggregate()
+    .unwind('$tags')
+    .group({_id: null, tagSet: {$addToSet: '$tags'}})
     .toArray()
-    .then(docs => docs.map(doc => doc.tags))
-    .then(tagLists => tagLists.flat())
-    .then(tagList => new Set(tagList))
-    .then(tags => Array.from(tags));
+    .then(arr => arr[0].tagSet);
 }
 
 const express = require('express');
