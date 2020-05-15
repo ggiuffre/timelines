@@ -16,6 +16,7 @@ services:
       - timelinesnetwork
   frontend:
     image: timelines-fronted:1
+    stdin_open: true # patch for React v3.4.1
     restart: always
     build: ./frontend
     ports:
@@ -23,7 +24,7 @@ services:
     volumes:
       - ./frontend:/frontend
       - /frontend/node_modules
-    links:
+    depends_on:
       - backend
     networks:
       - timelinesnetwork
@@ -34,7 +35,9 @@ services:
     volumes:
       - ./data-node:/data/db
     ports:
-      - 27017:27017
+      - "27017:27017"
+    expose:
+      - "27017"
     command: mongod --noauth
     networks:
       - timelinesnetwork

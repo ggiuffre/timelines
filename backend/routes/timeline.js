@@ -1,6 +1,6 @@
 const assert = require('assert');
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://user1:1234@localhost:27017/test';
+const url = 'mongodb://mongo:27017/test';
 const dbOptions = {useNewUrlParser: true, useUnifiedTopology: true};
 const client = new MongoClient(url, dbOptions);
 

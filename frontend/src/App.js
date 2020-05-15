@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return <div>
-      <form id="topic">
+      <form id="topic" onSubmit={e => {e.preventDefault(); this.updateTimeline()}}>
         <label>
           Topic:
           <input
