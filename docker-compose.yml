@@ -1,19 +1,6 @@
 version: '3'
 
 services:
-  backend:
-    image: timelines-backend:1
-    restart: always
-    build: ./backend
-    ports:
-      - "9000:9000"
-    volumes:
-      - ./backend:/backend
-      - /backend/node_modules
-    depends_on:
-      - mongodb
-    networks:
-      - timelinesnetwork
   frontend:
     image: timelines-fronted:1
     stdin_open: true # patch for React v3.4.1
@@ -28,6 +15,25 @@ services:
       - backend
     networks:
       - timelinesnetwork
+  backend:
+    image: timelines-backend:1
+    restart: always
+    build: ./backend
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./backend:/backend
+      - /backend/node_modules
+    depends_on:
+      - mongo-seed
+    networks:
+      - timelinesnetwork
+  mongo-seed:
+    build: ./mongo-seed
+    networks:
+      - timelinesnetwork
+    depends_on:
+      - mongodb
   mongodb:
     image: mongo
     restart: always
