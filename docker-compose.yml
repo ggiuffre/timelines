@@ -2,7 +2,7 @@ version: '3'
 
 services:
   frontend:
-    image: timelines-fronted:1
+    image: ggiuffre/timelines-fronted:1
     stdin_open: true # patch for React v3.4.1
     restart: always
     build: ./frontend
@@ -16,7 +16,7 @@ services:
     networks:
       - timelinesnetwork
   backend:
-    image: timelines-backend:1
+    image: ggiuffre/timelines-backend:1
     restart: always
     build: ./backend
     ports:
