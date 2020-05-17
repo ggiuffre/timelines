@@ -6,6 +6,12 @@
 		"tags": ["languages", "Pascal"]
 	},
 	{
+		"name": "LISP",
+		"type": "language",
+		"birth": 1958,
+		"tags": ["languages", "LISP"]
+	},
+	{
 		"name": "C",
 		"type": "language",
 		"birth": 1972,
@@ -48,6 +54,30 @@
 		"tags": ["languages", "SQL", "databases"]
 	},
 	{
+		"name": "Lua",
+		"type": "language",
+		"birth": 1993,
+		"tags": ["languages", "Lua", "embedded"]
+	},
+	{
+		"name": "Ruby",
+		"type": "language",
+		"birth": 1995,
+		"tags": ["languages", "Ruby", "OOP", "scripting"]
+	},
+	{
+		"name": "Perl",
+		"type": "language",
+		"birth": 1987,
+		"tags": ["languages", "Perl", "scripting"]
+	},
+	{
+		"name": "Prolog",
+		"type": "language",
+		"birth": 1972,
+		"tags": ["languages", "Prolog", "logic programming"]
+	},
+	{
 		"name": "MATLAB",
 		"type": "language",
 		"birth": 1984,
@@ -70,12 +100,6 @@
 		"type": "language",
 		"birth": 2011,
 		"tags": ["languages", "Kotlin", "JVM", "mobile"]
-	},
-	{
-		"name": "Ruby",
-		"type": "language",
-		"birth": 1995,
-		"tags": ["languages", "Ruby", "scripting"]
 	},
 	{
 		"name": "Julia",
