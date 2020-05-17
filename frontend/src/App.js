@@ -10,7 +10,7 @@ class App extends React.Component {
     this.updateTimeline = this.updateTimeline.bind(this);
     fetch('/timeline/tags')
       .then(res => res.json())
-      .then(tags => tags.map(tag => <option value={tag} />))
+      .then(tags => tags.map(tag => <option value={tag} key={tag} />))
       .then(options => this.options = options);
   }
 
