@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() {
     return <div>
-      <form id="topic" onSubmit={this.updateTimeline}>
+      <form name="topic" id="topic" onSubmit={this.updateTimeline}>
         <label>
           Topic:
           <input
