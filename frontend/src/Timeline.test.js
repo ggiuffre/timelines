@@ -36,5 +36,6 @@ test('renders a list of technologies', () => {
     expect(item).toHaveClass('Technology');
     expect(item.textContent).toContain(mockItemsArray[i].name);
     expect(item.textContent).toContain(mockItemsArray[i].birth.toString());
+    expect(item).toHaveClass((i % 2) ? 'left' : 'right');
   });
 });

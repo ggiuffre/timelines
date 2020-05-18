@@ -6,8 +6,10 @@ class Timeline extends React.Component {
   render() {
     return <ul className="Timeline">
       {this.props.techs
-      .sort((a, b) => (a.birth - b.birth))
-      .map((item, idx) => this.decoratedTechnology(item, (idx % 2 ? 'left' : 'right')))}
+        .sort((a, b) => (a.birth - b.birth))
+        .map((item, idx) =>
+          this.decoratedTechnology(item, (idx % 2 ? 'left' : 'right')))
+      }
     </ul>;
   }
 
