@@ -1,6 +1,6 @@
 # timelines
 
-A web app about the history of software: relevant languages, libraries, and softwares are displayed on a timeline and can be filtered by tag. Example tags are `#languages`, `#web`, `#libraries`, and `#OOP`.
+A web app about the history of software: relevant languages, libraries, and softwares are displayed on a timeline and can be filtered by tag. Example tags are `#languages`, `#web`, `#Python`, and `#libraries`.
 
 
 

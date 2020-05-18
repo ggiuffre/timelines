@@ -9,19 +9,33 @@
 		"name": "LISP",
 		"type": "language",
 		"birth": 1958,
-		"tags": ["languages", "LISP"]
+		"tags": ["languages", "LISP", "functional programming",
+			"garbage collector"]
+	},
+	{
+		"name": "Go",
+		"type": "language",
+		"birth": 2009,
+		"tags": ["languages", "Go", "concurrency", "OOP", "garbage collector"]
+	},
+	{
+		"name": "Elixir",
+		"type": "language",
+		"birth": 2011,
+		"tags": ["languages", "Elixir", "Erlang", "functional programming",
+			"concurrency"]
 	},
 	{
 		"name": "C",
 		"type": "language",
 		"birth": 1972,
-		"tags": ["languages", "C"]
+		"tags": ["languages", "C", "embedded"]
 	},
 	{
 		"name": "C++",
 		"type": "language",
 		"birth": 1985,
-		"tags": ["languages", "C++", "OOP"]
+		"tags": ["languages", "C++", "C", "OOP", "embedded"]
 	},
 	{
 		"name": "TeX",
@@ -45,7 +59,7 @@
 		"name": "CSS",
 		"type": "language",
 		"birth": 1996,
-		"tags": ["languages", "CSS", "web"]
+		"tags": ["languages", "CSS", "web", "graphics"]
 	},
 	{
 		"name": "SQL",
@@ -63,13 +77,25 @@
 		"name": "Ruby",
 		"type": "language",
 		"birth": 1995,
-		"tags": ["languages", "Ruby", "OOP", "scripting"]
+		"tags": ["languages", "Ruby", "OOP", "scripting", "garbage collector"]
 	},
 	{
 		"name": "Perl",
 		"type": "language",
 		"birth": 1987,
 		"tags": ["languages", "Perl", "scripting"]
+	},
+	{
+		"name": "Bash",
+		"type": "language",
+		"birth": 1989,
+		"tags": ["languages", "Bash", "scripting"]
+	},
+	{
+		"name": "C#",
+		"type": "language",
+		"birth": 2000,
+		"tags": ["languages", "C#", ".NET", "OOP"]
 	},
 	{
 		"name": "Prolog",
@@ -84,58 +110,109 @@
 		"tags": ["languages", "MATLAB", "scientific computing", "OOP"]
 	},
 	{
+		"name": "Swift",
+		"type": "language",
+		"birth": 2014,
+		"tags": ["languages", "Swift", "OOP", "mobile", "iOS"]
+	},
+	{
 		"name": "Java",
 		"type": "language",
 		"birth": 1995,
-		"tags": ["languages", "Java", "JVM", "OOP"]
+		"tags": ["languages", "Java", "JVM", "OOP", "garbage collector",
+			"mobile", "Android"]
 	},
 	{
 		"name": "Scala",
 		"type": "language",
 		"birth": 2004,
-		"tags": ["languages", "Scala", "JVM"]
+		"tags": ["languages", "Scala", "JVM", "OOP", "functional programming",
+			"mobile", "Android"]
 	},
 	{
 		"name": "Kotlin",
 		"type": "language",
 		"birth": 2011,
-		"tags": ["languages", "Kotlin", "JVM", "mobile"]
+		"tags": ["languages", "Kotlin", "JVM", "mobile", "Android"]
+	},
+	{
+		"name": "Dart",
+		"type": "language",
+		"birth": 2011,
+		"tags": ["languages", "Dart", "web", "mobile", "garbage collector",
+			"OOP", "iOS", "Android"]
+	},
+	{
+		"name": "Rust",
+		"type": "language",
+		"birth": 2010,
+		"tags": ["languages", "Rust", "concurrency"]
 	},
 	{
 		"name": "Julia",
 		"type": "language",
 		"birth": 2012,
-		"tags": ["languages", "Julia"]
+		"tags": ["languages", "Julia", "garbage collector"]
+	},
+	{
+		"name": "R",
+		"type": "language",
+		"birth": 1993,
+		"tags": ["languages", "R", "statistics", "scripting"]
+	},
+	{
+		"name": "VBA",
+		"type": "language",
+		"birth": 1993,
+		"tags": ["languages", "VBA", "Visual Basic", "event-driven"]
+	},
+	{
+		"name": "Objective-C",
+		"type": "language",
+		"birth": 1984,
+		"tags": ["languages", "Objective-C", "C", "OOP", "mobile", "iOS"]
+	},
+	{
+		"name": "Smalltalk-80",
+		"type": "language",
+		"birth": 1980,
+		"tags": ["languages", "Smalltalk-80", "OOP"]
 	},
 	{
 		"name": "JavaScript",
 		"type": "language",
 		"birth": 1997,
-		"tags": ["languages", "JavaScript", "scripting"]
+		"tags": ["languages", "JavaScript", "scripting", "ECMAScript",
+			"event-driven", "OOP", "functional programming",
+			"garbage collector"]
+	},
+	{
+		"name": "TypeScript",
+		"type": "language",
+		"birth": 2012,
+		"tags": ["languages", "TypeScript", "scripting", "ECMAScript",
+			"JavaScript", "event-driven", "OOP", "functional programming",
+			"garbage collector"]
 	},
 	{
 		"name": "Haskell",
 		"type": "language",
 		"birth": 1990,
-		"tags": ["languages", "Haskell", "functional programming"]
+		"tags": ["languages", "Haskell", "functional programming",
+			"garbage collector"]
 	},
 	{
 		"name": "PHP",
 		"type": "language",
 		"birth": 1995,
-		"tags": ["languages", "PHP", "scripting"]
+		"tags": ["languages", "PHP", "scripting", "web"]
 	},
 	{
 		"name": "Python",
 		"type": "language",
 		"birth": 1990,
-		"tags": ["languages", "Python", "scripting"]
-	},
-	{
-		"name": "Swift",
-		"type": "language",
-		"birth": 2014,
-		"tags": ["languages", "Swift", "mobile"]
+		"tags": ["languages", "Python", "scripting", "procedural",
+			"OOP"]
 	},
 	{
 		"name": "FastAPI",
@@ -157,6 +234,14 @@
 		"birth": 2010,
 		"languages": ["Python"],
 		"tags": ["libraries", "Python", "web", "back-end"]
+	},
+	{
+		"name": "Flutter",
+		"type": "library",
+		"birth": 2017,
+		"languages": ["Dart"],
+		"tags": ["libraries", "Dart", "web", "mobile", "front-end",
+			"iOS", "Android"]
 	},
 	{
 		"name": "React",
