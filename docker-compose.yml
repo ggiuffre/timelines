@@ -2,7 +2,7 @@ version: '3'
 
 services:
   frontend:
-    image: ggiuffre/timelines-fronted:1
+    image: ggiuffre/timelines-frontend:1
     stdin_open: true # patch for React v3.4.1
     restart: always
     build: ./frontend
@@ -13,8 +13,6 @@ services:
       - /frontend/node_modules
     depends_on:
       - backend
-    networks:
-      - timelinesnetwork
   backend:
     image: ggiuffre/timelines-backend:1
     restart: always
@@ -26,12 +24,8 @@ services:
       - /backend/node_modules
     depends_on:
       - mongo-seed
-    networks:
-      - timelinesnetwork
   mongo-seed:
     build: ./mongo-seed
-    networks:
-      - timelinesnetwork
     depends_on:
       - mongodb
   mongodb:
@@ -45,8 +39,3 @@ services:
     expose:
       - "27017"
     command: mongod --noauth
-    networks:
-      - timelinesnetwork
-networks:
-  timelinesnetwork:
-    driver: bridge
