@@ -1,5 +1,6 @@
 import React from 'react';
 import './Timeline.css';
+import './Technology.css';
 
 class Technology extends React.Component {
   constructor(props) {

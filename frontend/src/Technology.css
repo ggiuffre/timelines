@@ -1,0 +1,88 @@
+/* container around the content */
+.Technology {
+  list-style: none;
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* circles on the timeline */
+.Technology::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid rgba(255, 0, 0, 0.66);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* place containers to the left or right */
+.left { left: 0; }
+.right { left: 50%; }
+
+/* add arrows pointing left or right */
+.Technology::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  border: medium solid white;
+}
+
+/* arrows for left containers (pointing right) */
+.left::before {
+  right: 30px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* arrows for right containers (pointing left) */
+.right::before {
+  left: 30px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* the actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 4px;
+  display: block;
+}
+
+/* responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* full-width containers */
+  .Technology {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* make sure that all arrows are pointing leftwards */
+  .Technology::before {
+    left: 60px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* make sure all circles are at the same spot */
+  .Technology::after { left: 15px; }
+
+  /* make all right containers behave like the left ones */
+  .right { left: 0; }
+}
