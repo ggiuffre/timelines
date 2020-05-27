@@ -1,6 +1,6 @@
 import React from 'react';
+import TopicForm from './TopicForm.js';
 import Timeline from './Timeline.js';
-import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -8,11 +8,6 @@ class App extends React.Component {
     this.state = {technologies: [], topic: ''};
     this.updateTopic = this.updateTopic.bind(this);
     this.updateTimeline = this.updateTimeline.bind(this);
-    fetch('/timeline/tags')
-      .then(res => res.json())
-      .then(tags => tags.map(tag => <option value={tag} key={tag} />))
-      .then(options => options.sort((a, b) => a.key.localeCompare(b.key)))
-      .then(options => this.options = options);
   }
 
   componentDidMount() {
@@ -32,23 +27,14 @@ class App extends React.Component {
 
   render() {
     return <div>
-      <form name="topic" id="topic" onSubmit={this.updateTimeline}>
-        <label>
-          Topic:
-          <input
-            type="text"
-            value={this.state.topic}
-            onChange={this.updateTopic}
-            placeholder="web, Python, OOP..."
-            list="topics"
-          />
-        </label>
-        <datalist id="topics">
-          {this.options}
-        </datalist>
-        <input type="submit" value="Update" />
-      </form>
-      <Timeline techs={this.state.technologies} />
+      <TopicForm
+        topic={this.state.topic}
+        updateTopic={this.updateTopic}
+        updateTimeline={this.updateTimeline}
+      />
+      <Timeline
+        techs={this.state.technologies}
+      />
     </div>;
   }
 }
