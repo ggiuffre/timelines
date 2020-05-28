@@ -5,8 +5,22 @@ const dbOptions = {useNewUrlParser: true, useUnifiedTopology: true};
 const client = new MongoClient(url, dbOptions);
 
 function findTech(db, query) {
+  const topic = query.topic ? {tags: query.topic} : {};
+
+  const singular = {
+    languages: 'language',
+    libraries: 'library',
+    softwares: 'software'
+  };
+  const types = {type: {$in: Object.keys(query)
+    .filter(k => ['languages', 'libraries', 'softwares'].includes(k))
+    .filter(k => query[k] != '')
+    .map(k => singular[k])
+  }};
+  console.log({...types, ...topic});
+
   return db.collection('techs')
-    .find(query)
+    .find({...types, ...topic})
     .toArray();
 }
 
@@ -23,13 +37,16 @@ const express = require('express');
 const router = express.Router();
 
 client.connect(function(err) {
+
+  // get a timeline filtered with certain criteria:
   router.get('/', function(req, res, next) {
     assert.equal(null, err);
     const db = client.db('test');
-    const query = req.query.topic ? {tags: req.query.topic} : {};
     const send = technologies => res.json(technologies);
-    findTech(db, query).then(send);
+    findTech(db, req.query).then(send);
   });
+
+  // get all possible tags:
   router.get('/tags', function(req, res, next) {
     assert.equal(null, err);
     const db = client.db('test');

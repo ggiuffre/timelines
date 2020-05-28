@@ -5,8 +5,17 @@ import Timeline from './Timeline.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {technologies: [], topic: ''};
+    this.state = {
+      technologies: [],
+      topic: '',
+      types: {
+        languages: 'yup',
+        libraries: 'yup',
+        softwares: 'yup'
+      }
+    };
     this.updateTopic = this.updateTopic.bind(this);
+    this.updateTypes = this.updateTypes.bind(this);
     this.updateTimeline = this.updateTimeline.bind(this);
     this.topicFormFullPage = true;
   }
@@ -19,13 +28,19 @@ class App extends React.Component {
     this.setState({topic: event.target.value});
   }
 
+  updateTypes(event) {
+    let types = this.state.types;
+    types[event.target.value] = event.target.checked;
+    this.setState(types);
+  }
+
   updateTimeline(event) {
     // if the timeline is updated due to a browser event...
     if (arguments.length > 0) {
-      // ... avoid refreshing the page:
+      // avoid refreshing the page:
       event.preventDefault();
 
-      // ... minimize the topic form after its first use:
+      // minimize the topic form after its first use:
       if (this.topicFormFullPage)
         this.topicFormFullPage = false;
     }
@@ -33,7 +48,9 @@ class App extends React.Component {
     // update the state of the timeline:
     let endpoint = '/timeline';
     endpoint += '?topic=' + this.state.topic;
-    // TODO endpoint += '?types=' + this.state.topic;
+    Object.keys(this.state.types).forEach(key => {
+      endpoint += '&' + key + '=' + (this.state.types[key] || '');
+    });
     fetch(endpoint)
       .then(res => res.json())
       .then(technologies => this.setState({technologies: technologies}));
@@ -42,7 +59,9 @@ class App extends React.Component {
   render() {
     const topicForm = <TopicForm
         topic={this.state.topic}
+        types={this.state.types}
         updateTopic={this.updateTopic}
+        updateTypes={this.updateTypes}
         updateTimeline={this.updateTimeline}
         fullPage={this.topicFormFullPage}
       />;
