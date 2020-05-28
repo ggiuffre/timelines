@@ -14,10 +14,14 @@ class TopicForm extends React.Component {
   }
 
   render() {
-    return <form name="topic" id="topic" onSubmit={this.updateTimeline}>
-      <label>
-        Topic:
-        <input
+    return <form
+        className={this.props.fullPage ? 'fullpage' : ''}
+        name="topic"
+        id="topic"
+        onSubmit={this.updateTimeline}
+      >
+      <label>Topic: <input
+          tabIndex="1"
           type="text"
           value={this.props.topic}
           onChange={this.updateTopic}
@@ -28,6 +32,19 @@ class TopicForm extends React.Component {
       <datalist id="topics">
         {this.options}
       </datalist>
+
+      <label>
+      <input type="checkbox" id="languages" value="languages" />
+      show languages</label>
+
+      <label>
+      <input type="checkbox" id="libraries" value="libraries" />
+      show libraries</label>
+
+      <label>
+      <input type="checkbox" id="softwares" value="softwares" />
+      show softwares</label>
+
       <input type="submit" value="Update" />
     </form>;
   }

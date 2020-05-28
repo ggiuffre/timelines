@@ -1,10 +1,43 @@
 /* form that sets the topic of the timeline */
 #topic {
-  padding: 0.5em 1em;
+  padding: 0.5em 8%;
   background-color: rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  transition: padding-top 0.4s;
 }
 
-#topic input {
+/* full-page form */
+#topic.fullpage {
+  background-color: transparent;
+  box-shadow: none;
+  position: absolute;
+  margin: 0;
+  padding: 8%;
+}
+
+/* fancy golden ratio on wide screens! */
+@media screen and (min-width: 600px) {
+  #topic.fullpage {
+    padding-top: 62vh;
+  }
+}
+
+/* the (labelled) elements in the form */
+#topic > label, #topic > input {
+  background-color: white;
+  padding: 1em;
   margin: 1em;
+  border-color: white;
+  border-radius: 3px;
+}
+
+/* responsive form on small screens */
+@media screen and (max-width: 600px) {
+  #topic > label, #topic > input {
+    display: inline-block;
+    max-height: 3em;
+    margin: 0.5em 0.5%;
+    width: 96%;
+    padding: 1em 0.5%;
+  }
 }

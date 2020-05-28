@@ -8,6 +8,7 @@ class App extends React.Component {
     this.state = {technologies: [], topic: ''};
     this.updateTopic = this.updateTopic.bind(this);
     this.updateTimeline = this.updateTimeline.bind(this);
+    this.topicFormFullPage = true;
   }
 
   componentDidMount() {
@@ -19,22 +20,39 @@ class App extends React.Component {
   }
 
   updateTimeline(event) {
-    if (arguments.length > 0) event.preventDefault();
-    fetch('/timeline?topic=' + this.state.topic)
+    // if the timeline is updated due to a browser event...
+    if (arguments.length > 0) {
+      // ... avoid refreshing the page:
+      event.preventDefault();
+
+      // ... minimize the topic form after its first use:
+      if (this.topicFormFullPage)
+        this.topicFormFullPage = false;
+    }
+
+    // update the state of the timeline:
+    let endpoint = '/timeline';
+    endpoint += '?topic=' + this.state.topic;
+    // TODO endpoint += '?types=' + this.state.topic;
+    fetch(endpoint)
       .then(res => res.json())
       .then(technologies => this.setState({technologies: technologies}));
   }
 
   render() {
-    return <div>
-      <TopicForm
+    const topicForm = <TopicForm
         topic={this.state.topic}
         updateTopic={this.updateTopic}
         updateTimeline={this.updateTimeline}
-      />
-      <Timeline
-        techs={this.state.technologies}
-      />
+        fullPage={this.topicFormFullPage}
+      />;
+
+    const timeline = this.topicFormFullPage ? '' :
+      <Timeline techs={this.state.technologies} />;
+
+    return <div>
+      {topicForm}
+      {timeline}
     </div>;
   }
 }
