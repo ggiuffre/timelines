@@ -1,5 +1,5 @@
 import React from 'react';
-import TopicForm from './TopicForm.js';
+import FilterForm from './FilterForm.js';
 import Timeline from './Timeline.js';
 
 class App extends React.Component {
@@ -57,7 +57,7 @@ class App extends React.Component {
   }
 
   render() {
-    const topicForm = <TopicForm
+    const topicForm = <FilterForm
         topic={this.state.topic}
         types={this.state.types}
         updateTopic={this.updateTopic}

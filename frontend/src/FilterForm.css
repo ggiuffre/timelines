@@ -1,5 +1,5 @@
-/* form that sets the topic of the timeline */
-#topic {
+/* form that allows to filter the timeline */
+#filter {
   padding: 0.5em 8%;
   background-color: rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
@@ -7,7 +7,7 @@
 }
 
 /* full-page form */
-#topic.fullpage {
+#filter.fullpage {
   background-color: transparent;
   box-shadow: none;
   position: absolute;
@@ -17,13 +17,13 @@
 
 /* fancy golden ratio on wide screens! */
 @media screen and (min-width: 600px) {
-  #topic.fullpage {
+  #filter.fullpage {
     padding-top: 62vh;
   }
 }
 
 /* the (labelled) elements in the form */
-#topic > label, #topic > input {
+#filter > label, #filter > input {
   background-color: white;
   padding: 1em;
   margin: 1em;
@@ -33,7 +33,7 @@
 
 /* responsive form on small screens */
 @media screen and (max-width: 600px) {
-  #topic > label, #topic > input {
+  #filter > label, #filter > input {
     display: inline-block;
     max-height: 3em;
     margin: 0.5em 0.5%;

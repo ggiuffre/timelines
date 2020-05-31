@@ -1,7 +1,7 @@
 import React from 'react';
-import './TopicForm.css';
+import './FilterForm.css';
 
-class TopicForm extends React.Component {
+class FilterForm extends React.Component {
   constructor(props) {
     super(props);
     this.updateTopic = this.props.updateTopic;
@@ -17,8 +17,8 @@ class TopicForm extends React.Component {
   render() {
     return <form
         className={this.props.fullPage ? 'fullpage' : ''}
-        name="topic"
-        id="topic"
+        name="filter"
+        id="filter"
         onSubmit={this.updateTimeline}
       >
       <label>Topic: <input
@@ -72,4 +72,4 @@ class TopicForm extends React.Component {
   }
 }
 
-export default TopicForm;
+export default FilterForm;
