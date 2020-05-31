@@ -5,8 +5,11 @@ const dbOptions = {useNewUrlParser: true, useUnifiedTopology: true};
 const client = new MongoClient(url, dbOptions);
 
 function findTech(db, query) {
-  const topic = query.topic ? {tags: query.topic} : {};
+  // match case-insensitive tags:
+  const topic_regex = new RegExp('^' + query.topic + '$', 'i');
+  const topic = query.topic ? {tags: topic_regex} : {};
 
+  // filter by type:
   const singular = {
     languages: 'language',
     libraries: 'library',
@@ -17,8 +20,8 @@ function findTech(db, query) {
     .filter(k => query[k] != '')
     .map(k => singular[k])
   }};
-  console.log({...types, ...topic});
 
+  console.log({...types, ...topic});
   return db.collection('techs')
     .find({...types, ...topic})
     .toArray();
