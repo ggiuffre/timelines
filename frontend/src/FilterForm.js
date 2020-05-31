@@ -42,7 +42,7 @@ class FilterForm extends React.Component {
           onChange={this.updateTypes}
           checked={this.props.types.languages || ''}
         />
-        show languages
+        languages
       </label>
 
       <label>
@@ -53,7 +53,7 @@ class FilterForm extends React.Component {
           onChange={this.updateTypes}
           checked={this.props.types.libraries || ''}
         />
-        show libraries
+        libraries
       </label>
 
       <label>
@@ -64,7 +64,7 @@ class FilterForm extends React.Component {
           onChange={this.updateTypes}
           checked={this.props.types.softwares || ''}
         />
-        show softwares
+        softwares
       </label>
 
       <input type="submit" value="Update" />

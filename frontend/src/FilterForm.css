@@ -16,7 +16,7 @@
 }
 
 /* fancy golden ratio on wide screens! */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   #filter.fullpage {
     padding-top: 62vh;
   }
@@ -32,12 +32,16 @@
 }
 
 /* responsive form on small screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+  #filter {
+    padding: 0.5em 2%;
+  }
+
   #filter > label, #filter > input {
     display: inline-block;
     max-height: 3em;
     margin: 0.5em 0.5%;
-    width: 96%;
-    padding: 1em 0.5%;
+    width: 94%;
+    padding: 1em 2%;
   }
 }
