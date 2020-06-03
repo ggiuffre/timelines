@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   frontend:
     image: ggiuffre/timelines-frontend:1
     stdin_open: true # patch for React v3.4.1
@@ -8,35 +9,31 @@ services:
     build: ./frontend
     ports:
       - "80:3000"
-    # volumes:
-    #   - ./frontend:/frontend
-    #   - /frontend/node_modules
+    volumes: # for hot reloading with the dev server
+      - ./frontend:/frontend
+      - /frontend/node_modules
     depends_on:
       - backend
+
   backend:
     image: ggiuffre/timelines-backend:1
     restart: always
     build: ./backend
     ports:
       - "9000:9000"
-    # volumes:
-    #   - ./backend:/backend
-    #   - /backend/node_modules
     depends_on:
       - mongo-seed
+
   mongo-seed:
     image: ggiuffre/mongo-seed:1
     build: ./mongo-seed
     depends_on:
       - mongodb
+
   mongodb:
     image: mongo
     restart: always
     container_name: mongodb
-    # volumes:
-    #   - ./data-node:/data/db
-    ports:
-      - "27017:27017"
     expose:
       - "27017"
     command: mongod --noauth
