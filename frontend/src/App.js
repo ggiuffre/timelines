@@ -57,7 +57,7 @@ class App extends React.Component {
   }
 
   render() {
-    const topicForm = <FilterForm
+    const filterForm = <FilterForm
         topic={this.state.topic}
         types={this.state.types}
         updateTopic={this.updateTopic}
@@ -69,10 +69,10 @@ class App extends React.Component {
     const timeline = this.topicFormFullPage ? '' :
       <Timeline techs={this.state.technologies} />;
 
-    return <div>
-      {topicForm}
+    return <React.Fragment>
+      {filterForm}
       {timeline}
-    </div>;
+    </React.Fragment>;
   }
 }
 

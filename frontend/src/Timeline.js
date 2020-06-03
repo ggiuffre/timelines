@@ -18,7 +18,7 @@ class Timeline extends React.Component {
       key={data.name}
       name={data.name}
       birth={data.birth}
-      details={data.details}
+      tags={data.tags}
       side={side}
     />;
   }

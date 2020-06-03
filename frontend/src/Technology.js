@@ -6,18 +6,17 @@ class Technology extends React.Component {
   constructor(props) {
     super(props);
     this.state = {detailsVisible: false};
+    this.tags = <ul className="tagsList">{
+      this.props.tags.map(tag => <li>#{tag}</li>)
+    }</ul>;
 
     this.showDetails = this.showDetails.bind(this);
   }
 
-  showDetails() {
+  showDetails() { // TODO
     this.setState(state => ({
       detailsVisible: !state.detailsVisible
     }));
-  }
-
-  prettyDetails() {
-    return <span> <em>{this.props.details}</em></span>;
   }
 
   render() {
@@ -27,7 +26,7 @@ class Technology extends React.Component {
       >
       <span className="content">
         {this.props.name} ({this.props.birth})
-        {this.state.detailsVisible ? this.prettyDetails() : ''}
+        {this.tags}
       </span>
     </li>;
   }

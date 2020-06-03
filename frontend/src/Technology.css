@@ -86,3 +86,31 @@
   /* make all right containers behave like the left ones */
   .right { left: 0; }
 }
+
+/* list of tags to which a technology is related */
+.Technology .tagsList {
+  display: inline-block;
+  opacity: 0;
+  color: #555;
+  visibility: hidden;
+  list-style: none;
+  float: right;
+  max-width: 16em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: visibility 0s, opacity 0.2s;
+}
+
+/* highlighted list */
+.Technology:hover .tagsList {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.2s;
+}
+
+/* single tag */
+.Technology .tagsList > li {
+  display: inline;
+  margin: auto auto auto 0.6em;
+}
