@@ -62,6 +62,12 @@
 		"tags": ["languages", "CSS", "web", "graphics"]
 	},
 	{
+		"name": "Markdown",
+		"type": "language",
+		"birth": 2004,
+		"tags": ["languages", "Markdown", "markup"]
+	},
+	{
 		"name": "SQL",
 		"type": "language",
 		"birth": 1974,
@@ -215,6 +221,12 @@
 			"OOP"]
 	},
 	{
+		"name": "GraphQL",
+		"type": "language",
+		"birth": 2015,
+		"tags": ["languages", "GraphQL", "web"]
+	},
+	{
 		"name": "FastAPI",
 		"type": "library",
 		"birth": 2018,
@@ -263,6 +275,34 @@
 		"birth": 2014,
 		"languages": ["JavaScript"],
 		"tags": ["libraries", "JavaScript", "web", "front-end"]
+	},
+	{
+		"name": "jQuery",
+		"type": "library",
+		"birth": 2006,
+		"languages": ["JavaScript"],
+		"tags": ["libraries", "JavaScript", "web", "front-end"]
+	},
+	{
+		"name": "ASP.NET",
+		"type": "library",
+		"birth": 2002,
+		"languages": ["ASP"],
+		"tags": ["libraries", "ASP", "web"]
+	},
+	{
+		"name": "Express.js",
+		"type": "library",
+		"birth": 2010,
+		"languages": ["JavaScript"],
+		"tags": ["libraries", "JavaScript", "web", "back-end"]
+	},
+	{
+		"name": "Gatsby",
+		"type": "library",
+		"birth": 2015,
+		"languages": ["JavaScript"],
+		"tags": ["libraries", "JavaScript", "web"]
 	},
 	{
 		"name": "Spring",
@@ -374,6 +414,6 @@
 		"type": "software",
 		"birth": 2009,
 		"writtenIn": ["C", "C++", "JavaScript"],
-		"tags": ["software", "web", "backend", "JavaScript"]
+		"tags": ["software", "web", "back-end", "JavaScript"]
 	}
 ]
