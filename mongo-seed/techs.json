@@ -319,11 +319,39 @@
 		"tags": ["libraries", "PHP", "web", "back-end"]
 	},
 	{
+		"name": "Ruby on Rails",
+		"type": "library",
+		"birth": 2005,
+		"languages": ["Ruby"],
+		"tags": ["libraries", "Ruby", "web"]
+	},
+	{
+		"name": ".NET",
+		"type": "library",
+		"birth": 2002,
+		"languages": ["C#", "F#", "Visual Basic"],
+		"tags": ["libraries", ".NET", "web"]
+	},
+	{
 		"name": "TensorFlow",
 		"type": "library",
 		"birth": 2015,
 		"languages": ["C", "C++", "Python", "Java", "Go", "JavaScript", "Swift"],
 		"tags": ["libraries", "C", "C++", "Python", "Java", "Go", "JavaScript", "Swift", "machine learning"]
+	},
+	{
+		"name": "Torch",
+		"type": "library",
+		"birth": 2002,
+		"languages": ["Lua"],
+		"tags": ["libraries", "Lua", "machine learning"]
+	},
+	{
+		"name": "PyTorch",
+		"type": "library",
+		"birth": 2016,
+		"languages": ["Python"],
+		"tags": ["libraries", "Python", "machine learning"]
 	},
 	{
 		"name": "NumPy",
@@ -382,6 +410,20 @@
 		"tags": ["libraries", "Python", "machine learning", "linguistics"]
 	},
 	{
+		"name": "Spark",
+		"type": "library",
+		"birth": 2014,
+		"languages": ["Scala", "Java", "SQL", "Python", "R"],
+		"tags": ["libraries", "machine learning", "big data"]
+	},
+	{
+		"name": "Hadoop",
+		"type": "library",
+		"birth": 2006,
+		"languages": ["Java"],
+		"tags": ["libraries", "machine learning", "big data"]
+	},
+	{
 		"name": "Linux",
 		"type": "software",
 		"birth": 1991,
@@ -393,14 +435,14 @@
 		"type": "software",
 		"birth": 2013,
 		"writtenIn": ["Go"],
-		"tags": ["software", "containers"]
+		"tags": ["software", "DevOps"]
 	},
 	{
 		"name": "Kubernetes",
 		"type": "software",
 		"birth": 2014,
 		"writtenIn": ["Go"],
-		"tags": ["software", "containers", "orchestration"]
+		"tags": ["software", "DevOps"]
 	},
 	{
 		"name": "MongoDB",
@@ -415,5 +457,40 @@
 		"birth": 2009,
 		"writtenIn": ["C", "C++", "JavaScript"],
 		"tags": ["software", "web", "back-end", "JavaScript"]
+	},
+	{
+		"name": "Unity",
+		"type": "software",
+		"birth": 2005,
+		"writtenIn": ["C++", "C#"],
+		"tags": ["software", "gaming", "graphics", "C#"]
+	},
+	{
+		"name": "Unreal Engine",
+		"type": "software",
+		"birth": 1998,
+		"writtenIn": ["C++"],
+		"tags": ["software", "gaming", "graphics", "C++"]
+	},
+	{
+		"name": "Ansible",
+		"type": "software",
+		"birth": 2012,
+		"writtenIn": ["Python", "PowerShell", "Shell", "C#"],
+		"tags": ["software", "DevOps"]
+	},
+	{
+		"name": "Terraform",
+		"type": "software",
+		"birth": 2014,
+		"writtenIn": ["Go"],
+		"tags": ["software", "DevOps"]
+	},
+	{
+		"name": "Git",
+		"type": "software",
+		"birth": 2005,
+		"writtenIn": ["C", "Shell", "Perl", "Tcl", "Python"],
+		"tags": ["software", "version control"]
 	}
 ]
