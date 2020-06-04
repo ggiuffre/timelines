@@ -26,16 +26,23 @@ const mockItemsArray = [
   }
 ];
 
-test('renders a list of technologies', () => {
-  const timeline = render(<Timeline techs={mockItemsArray} />);
+test('renders a timeline as a list', () => {
+  const { getAllByRole } = render(<Timeline techs={mockItemsArray} />);
 
-  expect(timeline.getByRole('list')).toHaveClass('Timeline');
-  const listItems = timeline.getAllByRole('listitem');
-  expect(listItems.length).toBe(mockItemsArray.length);
-  listItems.forEach((item, i) => {
-    expect(item).toHaveClass('Technology');
-    expect(item.textContent).toContain(mockItemsArray[i].name);
-    expect(item.textContent).toContain(mockItemsArray[i].birth.toString());
-    expect(item).toHaveClass((i % 2) ? 'left' : 'right');
+  const timeline = getAllByRole('list')[0];
+  expect(timeline).toHaveClass('Timeline');
+});
+
+test('renders a list of technologies', () => {
+  const { getAllByRole } = render(<Timeline techs={mockItemsArray} />);
+
+  const timeline = getAllByRole('list')[0];
+  const technologies = timeline.children;
+  expect(technologies.length).toBe(mockItemsArray.length);
+  mockItemsArray.forEach((item, i) => {
+    expect(technologies[i]).toHaveClass('Technology');
+    expect(technologies[i].textContent).toContain(item.name);
+    expect(technologies[i].textContent).toContain(item.birth.toString());
+    expect(technologies[i]).toHaveClass((i % 2) ? 'left' : 'right');
   });
 });

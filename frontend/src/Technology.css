@@ -57,7 +57,7 @@
 
 /* the actual content */
 .content {
-  padding: 20px 30px;
+  padding: 3%;
   background-color: white;
   position: relative;
   border-radius: 4px;
@@ -102,15 +102,38 @@
   transition: visibility 0s, opacity 0.2s;
 }
 
-/* highlighted list */
+/* highlighted list (preview) */
 .Technology:hover .tagsList {
   opacity: 1;
   visibility: visible;
   transition: visibility 0s, opacity 0.2s;
 }
 
+/*.Technology .tagsList li:hover, .Technology.detailed {
+  color: #222;
+}*/
+
 /* single tag */
 .Technology .tagsList > li {
   display: inline;
   margin: auto auto auto 0.6em;
+}
+
+/* clicked list (complete) */
+.Technology.detailed .tagsList {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  max-width: 90%;
+  float: none;
+  margin: 3% 0 0 0;
+  text-align: right;
+  overflow: initial;
+  text-overflow: initial;
+  white-space: initial;
+  transition: margin 0.2s;
+}
+
+.Technology.detailed .tagsList li {
+  display: inline-block;
 }

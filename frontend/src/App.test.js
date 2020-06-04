@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import App from './App';
 
 const mockItemsArray = [
@@ -40,11 +40,15 @@ test('renders a form', () => {
   expect(app.getByRole('combobox')).toBeInTheDocument();
 });
 
-test('renders a list of items', () => {
-  const app = render(<App />);
+// test('renders a list of items, upon request', async () => {
+//   const app = render(<App />);
 
-  expect(app.getByRole('list')).toBeInTheDocument();
-  expect(app.getByRole('list')).toHaveClass('Timeline');
-});
+//   fireEvent.click(screen.getByText('Update'));
+
+//   await waitFor(() => screen.getByRole('list'));
+
+//   expect(screen.getByRole('list')).toBeInTheDocument();
+//   expect(screen.getByRole('list')).toHaveClass('Timeline');
+// });
 
 global.fetch.mockRestore();
