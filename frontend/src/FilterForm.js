@@ -64,7 +64,9 @@ class FilterForm extends React.Component {
         /> softwares
       </label>
 
-      <input type="submit" value="Update" />
+      <label>
+        <input type="submit" value="Update" />
+      </label>
     </form>;
   }
 }

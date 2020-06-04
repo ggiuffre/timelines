@@ -7,6 +7,18 @@
   box-sizing: border-box;
 }
 
+/*.Technology.language .content {
+  background-color: #BFF;
+}
+
+.Technology.library .content {
+  background-color: #FBF;
+}
+
+.Technology.software .content {
+  background-color: #FFB;
+}*/
+
 /* circles on the timeline */
 .Technology::after {
   content: '';
@@ -91,7 +103,7 @@
 .Technology .tagsList {
   display: inline-block;
   opacity: 0;
-  color: #555;
+  color: #B55;
   visibility: hidden;
   list-style: none;
   float: right;
@@ -109,14 +121,20 @@
   transition: visibility 0s, opacity 0.2s;
 }
 
-/*.Technology .tagsList li:hover, .Technology.detailed {
-  color: #222;
+/*.Technology .tagsList > li:hover {
+  color: #800;
 }*/
 
 /* single tag */
 .Technology .tagsList > li {
   display: inline;
   margin: auto auto auto 0.6em;
+}
+
+/* hashtag before single tag */
+.Technology .tagsList > li::before {
+  content: '#';
+  color: #555;
 }
 
 /* clicked list (complete) */
@@ -134,6 +152,7 @@
   transition: margin 0.2s;
 }
 
+/* non-breakable elements for a multi-line list */
 .Technology.detailed .tagsList li {
   display: inline-block;
 }

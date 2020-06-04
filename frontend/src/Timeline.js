@@ -16,6 +16,7 @@ class Timeline extends React.Component {
   decoratedTechnology(data, side = 'right') {
     return <Technology
       key={data.name}
+      type={data.type}
       name={data.name}
       birth={data.birth}
       tags={data.tags}

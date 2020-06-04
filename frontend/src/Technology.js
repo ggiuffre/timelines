@@ -7,7 +7,7 @@ class Technology extends React.Component {
     super(props);
     this.state = {detailsVisible: false};
     this.tags = <ul className="tagsList">{
-      this.props.tags.map(tag => <li key={tag}>#{tag}</li>)
+      this.props.tags.map(tag => <li key={tag}>{tag}</li>)
     }</ul>;
 
     this.showDetails = this.showDetails.bind(this);
@@ -22,6 +22,7 @@ class Technology extends React.Component {
   render() {
     const classes = [
       'Technology',
+      this.props.type,
       this.props.side,
       this.state.detailsVisible ? 'detailed' : ''
     ].join(' ');

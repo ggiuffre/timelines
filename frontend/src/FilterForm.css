@@ -1,9 +1,10 @@
 /* form that allows to filter the timeline */
 #filter {
-  padding: 0.5em 8%;
   background-color: rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   transition: padding-top 0.4s;
+  text-align: center;
+  padding: 2em 8%;
 }
 
 /* full-page form */
@@ -11,8 +12,9 @@
   background-color: transparent;
   box-shadow: none;
   position: absolute;
-  margin: 0;
   padding: 8%;
+  margin: 0;
+  width: 84%;
 }
 
 /* fancy golden ratio on wide screens! */
@@ -23,25 +25,30 @@
 }
 
 /* the (labelled) elements in the form */
-#filter > label, #filter > input {
+#filter > label {
   background-color: white;
-  padding: 1em;
-  margin: 1em;
+  padding: 1%;
+  margin: 1%;
   border-color: white;
   border-radius: 3px;
+  text-align: initial;
+}
+
+#filter > label > input {
+  background-color: inherit;
+  border: none;
 }
 
 /* responsive form on small screens */
 @media screen and (max-width: 900px) {
   #filter {
-    padding: 0.5em 2%;
+    padding: 2%;
   }
 
-  #filter > label, #filter > input {
+  #filter > label {
     display: inline-block;
-    max-height: 3em;
     margin: 0.5em 0.5%;
-    width: 94%;
-    padding: 1em 2%;
+    width: 92%;
+    padding: 4%;
   }
 }
