@@ -2,6 +2,13 @@
 *.sublime-project
 *.sublime-workspace
 
+# React optimized builds
+frontend/build
+backend/public/*
+!backend/public/images
+!backend/public/javascripts
+!backend/public/stylesheets
+
 # Logs
 logs
 *.log
