@@ -114,16 +114,18 @@
   transition: visibility 0s, opacity 0.2s;
 }
 
-/* highlighted list (preview) */
-.Technology:hover .tagsList {
-  opacity: 1;
-  visibility: visible;
-  transition: visibility 0s, opacity 0.2s;
-}
+/* highlighted list (preview) on desktops */
+@media screen and (min-width: 900px) {
+  .Technology:hover .tagsList {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s, opacity 0.2s;
+  }
 
-/*.Technology .tagsList > li:hover {
-  color: #800;
-}*/
+  /*.Technology .tagsList > li:hover {
+    color: #800;
+  }*/
+}
 
 /* single tag */
 .Technology .tagsList > li {

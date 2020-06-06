@@ -7,7 +7,7 @@ class FilterForm extends React.Component {
     this.updateTopic = this.props.updateTopic;
     this.updateTypes = this.props.updateTypes;
     this.updateTimeline = this.props.updateTimeline;
-    fetch('http://localhost:9000/timeline/tags')
+    fetch('/timeline/tags')
       .then(res => res.json())
       .then(tags => tags.map(tag => <option value={tag} key={tag} />))
       .then(options => options.sort((a, b) => a.key.localeCompare(b.key)))

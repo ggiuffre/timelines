@@ -46,7 +46,7 @@ class App extends React.Component {
     }
 
     // update the state of the timeline:
-    let endpoint = 'http://localhost:9000/timeline';
+    let endpoint = '/timeline';
     endpoint += '?topic=' + this.state.topic;
     Object.keys(this.state.types).forEach(key => {
       endpoint += '&' + key + '=' + (this.state.types[key] || '');
