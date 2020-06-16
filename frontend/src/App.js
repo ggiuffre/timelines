@@ -53,7 +53,8 @@ class App extends React.Component {
     });
     fetch(endpoint)
       .then(res => res.json())
-      .then(technologies => this.setState({technologies: technologies}));
+      .then(technologies => this.setState({technologies: technologies}))
+      .catch(() => alert('Error while fetching data.'));
   }
 
   render() {

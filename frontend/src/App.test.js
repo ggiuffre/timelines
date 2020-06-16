@@ -2,53 +2,72 @@ import React from 'react';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import App from './App';
 
-const mockItemsArray = [
-  {
+const mockItemsArray = [{
     _id: 123,
     name: 'SomeLibrary',
     type: 'library',
     birth: 1861,
     tags: ['SomeLibrary', 'libraries', 'some other tag']
-  },
-  {
+  }, {
     _id: 456,
     name: 'Some Language',
     type: 'language',
     birth: 1860,
     tags: ['Some Language', 'languages', 'some other tag']
-  },
-  {
+  }, {
     _id: 789,
     name: 'something-else',
-    type: 'other',
+    type: 'software',
     birth: 1999,
     tags: ['something-else', 'some tag']
-  }
-];
+}];
 
-jest.spyOn(global, 'fetch').mockImplementation(() =>
-  Promise.resolve({
-    json: () => Promise.resolve(mockItemsArray)
-  })
-);
+const mockTags = ['SomeLibrary', 'libraries', 'some other tag',
+  'Some Language', 'languages', 'something-else', 'some tag'];
 
-test('renders a form', () => {
-  const app = render(<App />);
+beforeEach(() => {
+  jest.spyOn(window, 'fetch').mockImplementation(endpoint => {
+    let response;
+    if (endpoint.includes('tags'))
+      response = mockTags;
+    else
+      response = mockItemsArray;
 
-  expect(app.getByRole('form')).toBeInTheDocument();
-  expect(app.getByRole('form')).toHaveAttribute('id');
-  expect(app.getByRole('combobox')).toBeInTheDocument();
+    return Promise.resolve({
+      json: () => Promise.resolve(response)
+    });
+  });
 });
 
-// test('renders a list of items, upon request', async () => {
-//   const app = render(<App />);
+afterEach(() => {
+  window.fetch.mockRestore();
+});
 
-//   fireEvent.click(screen.getByText('Update'));
 
-//   await waitFor(() => screen.getByRole('list'));
 
-//   expect(screen.getByRole('list')).toBeInTheDocument();
-//   expect(screen.getByRole('list')).toHaveClass('Timeline');
-// });
+describe('An App component', () => {
+  it('contains a form', () => {
+    const app = render(<App />);
 
-global.fetch.mockRestore();
+    expect(app.getByRole('form')).toBeInTheDocument();
+  });
+
+  it('does not show a timeline, if not requested', () => {
+    const app = render(<App />);
+
+    screen.queryAllByRole('list').forEach(renderedList => {
+      expect(renderedList).not.toHaveClass('Timeline');
+    });
+  });
+
+  it('shows a timeline of items, upon request', async () => {
+    const app = render(<App />);
+
+    fireEvent.click(screen.getByText('Update'));
+
+    await waitFor(() => screen.getAllByRole('list'));
+
+    expect(screen.getAllByRole('list')[0]).toBeInTheDocument();
+    expect(screen.getAllByRole('list')[0]).toHaveClass('Timeline');
+  });
+});

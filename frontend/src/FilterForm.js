@@ -11,7 +11,8 @@ class FilterForm extends React.Component {
       .then(res => res.json())
       .then(tags => tags.map(tag => <option value={tag} key={tag} />))
       .then(options => options.sort((a, b) => a.key.localeCompare(b.key)))
-      .then(options => this.options = options);
+      .then(options => this.options = options)
+      .catch(() => alert('Error while fetching data.'));
   }
 
   render() {
