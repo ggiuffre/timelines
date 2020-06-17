@@ -121,7 +121,7 @@
 		"name": "Nim",
 		"birth": 2008,
 		"tags": ["Nim", "scripting", "OOP",
-			"functional", "zero-indexed"]
+			"functional programming", "zero-indexed"]
 	},
 	{
 		"name": "Objective-C",
