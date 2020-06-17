@@ -16,6 +16,21 @@ class FilterForm extends React.Component {
   }
 
   render() {
+
+    // checkboxes that provide extra filtering capabilities:
+    const typeButtons = Object.keys(this.props.types).map(type =>
+      <label key={type}>
+        <input
+          type="checkbox"
+          id={type}
+          value={type}
+          onChange={this.updateTypes}
+          checked={this.props.types[type] || ''}
+        /> {type}
+      </label>
+    );
+
+    // the whole form:
     return <form
         className={this.props.fullPage ? 'fullpage' : ''}
         name="filter"
@@ -35,35 +50,7 @@ class FilterForm extends React.Component {
         {this.options}
       </datalist>
 
-      <label>
-        <input
-          type="checkbox"
-          id="languages"
-          value="languages"
-          onChange={this.updateTypes}
-          checked={this.props.types.languages || ''}
-        /> languages
-      </label>
-
-      <label>
-        <input
-          type="checkbox"
-          id="libraries"
-          value="libraries"
-          onChange={this.updateTypes}
-          checked={this.props.types.libraries || ''}
-        /> libraries
-      </label>
-
-      <label>
-        <input
-          type="checkbox"
-          id="softwares"
-          value="softwares"
-          onChange={this.updateTypes}
-          checked={this.props.types.softwares || ''}
-        /> softwares
-      </label>
+      {typeButtons}
 
       <label>
         <input type="submit" value="Update" />

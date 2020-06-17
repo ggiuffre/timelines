@@ -1,12 +1,12 @@
 # timelines
 
-A web app about the history of software: relevant languages, libraries, and softwares are displayed on a timeline and can be filtered by tag. Example tags are `#languages`, `#web`, `#Python`, and `#libraries`.
+A web app about the history of programming languages: relevant languages are displayed on a timeline and can be filtered by tag. Example tags are `#OOP`, `#web`, `#Python`, and `#zero-indexed`.
 
 
 
 ## Hosting this web app locally
 
-Assuming you have installed Git, Docker, and Docker Compose on your computer, you can serve this web app yourself by just cloning the repo and using Docker:
+Assuming you have installed Git and Docker Compose on your machine, you can serve this web app locally by just cloning the repo and using Docker Compose:
 
 ```
 git clone https://github.com/ggiuffre/timelines.git

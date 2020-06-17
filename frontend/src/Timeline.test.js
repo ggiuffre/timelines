@@ -27,22 +27,22 @@ const mockItemsArray = [
 ];
 
 test('renders a timeline as a list', () => {
-  const { getAllByRole } = render(<Timeline techs={mockItemsArray} />);
+  const { getAllByRole } = render(<Timeline items={mockItemsArray} />);
 
   const timeline = getAllByRole('list')[0];
   expect(timeline).toHaveClass('Timeline');
 });
 
-test('renders a list of technologies', () => {
-  const { getAllByRole } = render(<Timeline techs={mockItemsArray} />);
+test('renders a list of languages', () => {
+  const { getAllByRole } = render(<Timeline items={mockItemsArray} />);
 
   const timeline = getAllByRole('list')[0];
-  const technologies = timeline.children;
-  expect(technologies.length).toBe(mockItemsArray.length);
+  const languages = timeline.children;
+  expect(languages.length).toBe(mockItemsArray.length);
   mockItemsArray.forEach((item, i) => {
-    expect(technologies[i]).toHaveClass('Technology');
-    expect(technologies[i].textContent).toContain(item.name);
-    expect(technologies[i].textContent).toContain(item.birth.toString());
-    expect(technologies[i]).toHaveClass((i % 2) ? 'left' : 'right');
+    expect(languages[i]).toHaveClass('TimelineItem');
+    expect(languages[i].textContent).toContain(item.name);
+    expect(languages[i].textContent).toContain(item.birth.toString());
+    expect(languages[i]).toHaveClass((i % 2) ? 'left' : 'right');
   });
 });

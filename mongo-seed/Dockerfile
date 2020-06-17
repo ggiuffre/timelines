@@ -1,4 +1,4 @@
 FROM mongo
 
-COPY techs.json /techs.json
-CMD mongoimport --host mongodb --db test --collection techs --drop --file /techs.json --jsonArray
+COPY languages.json /languages.json
+CMD mongoimport --host mongodb --db test --collection languages --drop --file /languages.json --jsonArray

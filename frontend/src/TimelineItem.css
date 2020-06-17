@@ -1,5 +1,5 @@
 /* container around the content */
-.Technology {
+.TimelineItem {
   list-style: none;
   padding: 10px 40px;
   position: relative;
@@ -7,20 +7,20 @@
   box-sizing: border-box;
 }
 
-/*.Technology.language .content {
+/*.TimelineItem.language .content {
   background-color: #BFF;
 }
 
-.Technology.library .content {
+.TimelineItem.library .content {
   background-color: #FBF;
 }
 
-.Technology.software .content {
+.TimelineItem.software .content {
   background-color: #FFB;
 }*/
 
 /* circles on the timeline */
-.Technology::after {
+.TimelineItem::after {
   content: '';
   position: absolute;
   width: 25px;
@@ -38,7 +38,7 @@
 .right { left: 50%; }
 
 /* add arrows pointing left or right */
-.Technology::before {
+.TimelineItem::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -79,28 +79,28 @@
 /* responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   /* full-width containers */
-  .Technology {
+  .TimelineItem {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
 
   /* make sure that all arrows are pointing leftwards */
-  .Technology::before {
+  .TimelineItem::before {
     left: 60px;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
 
   /* make sure all circles are at the same spot */
-  .Technology::after { left: 15px; }
+  .TimelineItem::after { left: 15px; }
 
   /* make all right containers behave like the left ones */
   .right { left: 0; }
 }
 
-/* list of tags to which a technology is related */
-.Technology .tagsList {
+/* list of tags to which a TimelineItem is related */
+.TimelineItem .tagsList {
   display: inline-block;
   opacity: 0;
   color: #B55;
@@ -116,31 +116,31 @@
 
 /* highlighted list (preview) on desktops */
 @media screen and (min-width: 900px) {
-  .Technology:hover .tagsList {
+  .TimelineItem:hover .tagsList {
     opacity: 1;
     visibility: visible;
     transition: visibility 0s, opacity 0.2s;
   }
 
-  /*.Technology .tagsList > li:hover {
+  /*.TimelineItem .tagsList > li:hover {
     color: #800;
   }*/
 }
 
 /* single tag */
-.Technology .tagsList > li {
+.TimelineItem .tagsList > li {
   display: inline;
   margin: auto auto auto 0.6em;
 }
 
 /* hashtag before single tag */
-.Technology .tagsList > li::before {
+.TimelineItem .tagsList > li::before {
   content: '#';
   color: #555;
 }
 
 /* clicked list (complete) */
-.Technology.detailed .tagsList {
+.TimelineItem.detailed .tagsList {
   display: block;
   opacity: 1;
   visibility: visible;
@@ -155,6 +155,6 @@
 }
 
 /* non-breakable elements for a multi-line list */
-.Technology.detailed .tagsList li {
+.TimelineItem.detailed .tagsList li {
   display: inline-block;
 }

@@ -1,0 +1,219 @@
+[
+	{
+		"name": "Ada",
+		"birth": 1980,
+		"tags": ["Ada", "Pascal", "OOP", "embedded"]
+	},
+	{
+		"name": "Bash",
+		"birth": 1989,
+		"tags": ["Bash", "scripting"]
+	},
+	{
+		"name": "C",
+		"birth": 1972,
+		"tags": ["C", "embedded", "zero-indexed"]
+	},
+	{
+		"name": "C++",
+		"birth": 1985,
+		"tags": ["C++", "C", "OOP", "embedded", "zero-indexed"]
+	},
+	{
+		"name": "C#",
+		"birth": 2000,
+		"tags": ["C#", ".NET", "OOP", "zero-indexed"]
+	},
+	{
+		"name": "COBOL",
+		"birth": 1959,
+		"tags": ["COBOL"]
+	},
+	{
+		"name": "CSS",
+		"birth": 1996,
+		"tags": ["CSS", "web", "graphics"]
+	},
+	{
+		"name": "Dart",
+		"birth": 2011,
+		"tags": ["Dart", "web", "mobile", "garbage collector",
+			"OOP", "iOS", "Android"]
+	},
+	{
+		"name": "Elixir",
+		"birth": 2011,
+		"tags": ["Elixir", "Erlang", "functional programming",
+			"concurrency"]
+	},
+	{
+		"name": "Fortran",
+		"birth": 1957,
+		"tags": ["Fortran", "scientific computing"]
+	},
+	{
+		"name": "Go",
+		"birth": 2009,
+		"tags": ["Go", "concurrency", "OOP",
+			"garbage collector", "zero-indexed"]
+	},
+	{
+		"name": "GraphQL",
+		"birth": 2015,
+		"tags": ["GraphQL", "web"]
+	},
+	{
+		"name": "Haskell",
+		"birth": 1990,
+		"tags": ["Haskell", "functional programming",
+			"garbage collector", "zero-indexed"]
+	},
+	{
+		"name": "HTML",
+		"birth": 1993,
+		"tags": ["HTML", "markup", "web"]
+	},
+	{
+		"name": "Java",
+		"birth": 1995,
+		"tags": ["Java", "JVM", "OOP", "garbage collector",
+			"mobile", "Android", "zero-indexed"]
+	},
+	{
+		"name": "JavaScript",
+		"birth": 1997,
+		"tags": ["JavaScript", "scripting", "ECMAScript",
+			"event-driven", "OOP", "functional programming",
+			"garbage collector", "zero-indexed"]
+	},
+	{
+		"name": "Julia",
+		"birth": 2012,
+		"tags": ["Julia", "garbage collector"]
+	},
+	{
+		"name": "Kotlin",
+		"birth": 2011,
+		"tags": ["Kotlin", "JVM", "mobile", "Android"]
+	},
+	{
+		"name": "LISP",
+		"birth": 1958,
+		"tags": ["LISP", "functional programming",
+			"garbage collector", "zero-indexed"]
+	},
+	{
+		"name": "Lua",
+		"birth": 1993,
+		"tags": ["Lua", "embedded"]
+	},
+	{
+		"name": "Markdown",
+		"birth": 2004,
+		"tags": ["Markdown", "markup"]
+	},
+	{
+		"name": "MATLAB",
+		"birth": 1984,
+		"tags": ["MATLAB", "scientific computing", "OOP"]
+	},
+	{
+		"name": "Nim",
+		"birth": 2008,
+		"tags": ["Nim", "scripting", "OOP",
+			"functional", "zero-indexed"]
+	},
+	{
+		"name": "Objective-C",
+		"birth": 1984,
+		"tags": ["Objective-C", "C", "OOP", "mobile",
+			"iOS", "zero-indexed"]
+	},
+	{
+		"name": "Pascal",
+		"birth": 1970,
+		"tags": ["Pascal"]
+	},
+	{
+		"name": "Perl",
+		"birth": 1987,
+		"tags": ["Perl", "scripting", "zero-indexed"]
+	},
+	{
+		"name": "PHP",
+		"birth": 1995,
+		"tags": ["PHP", "scripting", "web", "zero-indexed"]
+	},
+	{
+		"name": "Prolog",
+		"birth": 1972,
+		"tags": ["Prolog", "logic programming"]
+	},
+	{
+		"name": "Python",
+		"birth": 1990,
+		"tags": ["Python", "scripting", "procedural",
+			"OOP", "zero-indexed"]
+	},
+	{
+		"name": "R",
+		"birth": 1993,
+		"tags": ["R", "statistics", "scripting"]
+	},
+	{
+		"name": "Ruby",
+		"birth": 1995,
+		"tags": ["Ruby", "OOP", "scripting",
+			"garbage collector", "zero-indexed"]
+	},
+	{
+		"name": "Rust",
+		"birth": 2010,
+		"tags": ["Rust", "concurrency"]
+	},
+	{
+		"name": "Scala",
+		"birth": 2004,
+		"tags": ["Scala", "JVM", "OOP", "mobile",
+			"functional programming", "Android", "zero-indexed"]
+	},
+	{
+		"name": "Smalltalk-80",
+		"birth": 1980,
+		"tags": ["Smalltalk-80", "OOP"]
+	},
+	{
+		"name": "SQL",
+		"birth": 1974,
+		"tags": ["SQL", "databases"]
+	},
+	{
+		"name": "Swift",
+		"birth": 2014,
+		"tags": ["Swift", "OOP", "mobile", "iOS",
+			"zero-indexed"]
+	},
+	{
+		"name": "TeX",
+		"birth": 1978,
+		"tags": ["TeX", "typesetting", "markup"]
+	},
+	{
+		"name": "TypeScript",
+		"birth": 2012,
+		"tags": ["TypeScript", "scripting", "ECMAScript",
+			"JavaScript", "event-driven", "OOP", "functional programming",
+			"garbage collector", "zero-indexed"]
+	},
+	{
+		"name": "VBA",
+		"birth": 1993,
+		"tags": ["VBA", "Visual Basic", "event-driven",
+			"zero-indexed"]
+	},
+	{
+		"name": "XML",
+		"birth": 1996,
+		"tags": ["XML", "markup", "web"]
+	}
+]

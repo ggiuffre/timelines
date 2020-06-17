@@ -6,12 +6,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      technologies: [],
-      topic: '',
-      types: {
-        languages: 'yup',
-        libraries: 'yup',
-        softwares: 'yup'
+      languages: [], // languages currently on screen
+      topic: '', // main topic
+      types: { // extra filtering capabilities
+        // languages: 'yup',
+        // libraries: 'yup',
+        // softwares: 'yup'
       }
     };
     this.updateTopic = this.updateTopic.bind(this);
@@ -53,7 +53,7 @@ class App extends React.Component {
     });
     fetch(endpoint)
       .then(res => res.json())
-      .then(technologies => this.setState({technologies: technologies}))
+      .then(languages => this.setState({languages: languages}))
       .catch(() => alert('Error while fetching data.'));
   }
 
@@ -68,7 +68,7 @@ class App extends React.Component {
       />;
 
     const timeline = this.topicFormFullPage ? '' :
-      <Timeline techs={this.state.technologies} />;
+      <Timeline items={this.state.languages} />;
 
     return <React.Fragment>
       {filterForm}

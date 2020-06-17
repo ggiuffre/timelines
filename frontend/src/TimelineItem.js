@@ -1,8 +1,8 @@
 import React from 'react';
 import './Timeline.css';
-import './Technology.css';
+import './TimelineItem.css';
 
-class Technology extends React.Component {
+class TimelineItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {detailsVisible: false};
@@ -21,7 +21,7 @@ class Technology extends React.Component {
 
   render() {
     const classes = [
-      'Technology',
+      'TimelineItem',
       this.props.type,
       this.props.side,
       this.state.detailsVisible ? 'detailed' : ''
@@ -38,4 +38,4 @@ class Technology extends React.Component {
   }
 }
 
-export default Technology;
+export default TimelineItem;

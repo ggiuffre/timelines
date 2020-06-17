@@ -1,20 +1,20 @@
 import React from 'react';
-import Technology from './Technology.js';
+import TimelineItem from './TimelineItem.js';
 import './Timeline.css';
 
 class Timeline extends React.Component {
   render() {
     return <ul className="Timeline">
-      {this.props.techs
+      {this.props.items
         .sort((a, b) => (a.birth - b.birth))
         .map((item, idx) =>
-          this.decoratedTechnology(item, (idx % 2 ? 'left' : 'right')))
+          this.decoratedTimelineItem(item, (idx % 2 ? 'left' : 'right')))
       }
     </ul>;
   }
 
-  decoratedTechnology(data, side = 'right') {
-    return <Technology
+  decoratedTimelineItem(data, side = 'right') {
+    return <TimelineItem
       key={data.name}
       type={data.type}
       name={data.name}

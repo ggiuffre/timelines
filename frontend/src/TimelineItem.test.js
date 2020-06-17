@@ -1,39 +1,38 @@
 import React from 'react';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
-import Technology from './Technology';
+import TimelineItem from './TimelineItem';
 
 const mockItem = {
   _id: 123,
-  name: 'SomeLibrary',
-  type: 'library',
+  name: 'SomeLanguage',
   birth: 1861,
-  tags: ['SomeLibrary', 'libraries', 'some other tag']
+  tags: ['SomeLanguage', 'some-tag', 'some other tag']
 };
 
 describe('', () => {
-  const { getAllByRole, getByRole } = render(<Technology
+  const { getAllByRole, getByRole } = render(<TimelineItem
     name={mockItem.name}
     birth={mockItem.birth}
     tags={mockItem.tags}
     side="left"
     />);
-  const technology = getAllByRole('listitem')[0];
+  const timelineItem = getAllByRole('listitem')[0];
 
-  test('renders a technology', () => {
-    expect(technology).toHaveClass('Technology');
+  test('renders a TimelineItem', () => {
+    expect(timelineItem).toHaveClass('TimelineItem');
   });
 
   test('has known content', () => {
-    expect(technology.textContent).toMatch(mockItem.name);
-    expect(technology.textContent).toMatch(mockItem.birth.toString());
+    expect(timelineItem.textContent).toMatch(mockItem.name);
+    expect(timelineItem.textContent).toMatch(mockItem.birth.toString());
     mockItem.tags.forEach(tag => {
-      expect(technology.textContent).toMatch(tag);
+      expect(timelineItem.textContent).toMatch(tag);
     });
   });
 });
 
 test('contains a list of tags', () => {
-  const { getAllByRole, getByRole } = render(<Technology
+  const { getAllByRole, getByRole } = render(<TimelineItem
     name={mockItem.name}
     birth={mockItem.birth}
     tags={mockItem.tags}
@@ -50,7 +49,7 @@ test('contains a list of tags', () => {
 });
 
 // test('has no visible tags until clicked or hovered', () => {
-//   const { getAllByRole, getByRole } = render(<Technology
+//   const { getAllByRole, getByRole } = render(<TimelineItem
 //     name={mockItem.name}
 //     birth={mockItem.birth}
 //     tags={mockItem.tags}
@@ -62,15 +61,15 @@ test('contains a list of tags', () => {
 // });
 
 // test('has visible tags when clicked', async () => {
-//   const { getAllByRole, getByRole } = render(<Technology
+//   const { getAllByRole, getByRole } = render(<TimelineItem
 //     name={mockItem.name}
 //     birth={mockItem.birth}
 //     tags={mockItem.tags}
 //     side="left"
 //     />);
-//   const technology = getAllByRole('listitem')[0];
+//   const TimelineItem = getAllByRole('listitem')[0];
 
-//   fireEvent.click(technology);
+//   fireEvent.click(TimelineItem);
 //   await waitFor(() => getByRole('list'));
 
 //   const tagsList = getByRole('list');
