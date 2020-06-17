@@ -27,7 +27,7 @@ function findTech(db, query) {
   // declare type filters:
   const types = {type: {$in: Object.keys(query)
     .filter(k => ['languages', 'libraries', 'softwares'].includes(k))
-    .filter(k => query[k] != '')
+    .filter(k => query[k] !== '')
     .map(k => singular[k])
   }};
 
