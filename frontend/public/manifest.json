@@ -1,6 +1,6 @@
 {
-  "short_name": "Timelines",
-  "name": "Software Timelines",
+  "short_name": "Timelang",
+  "name": "Timelang",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#BB5555"
 }
