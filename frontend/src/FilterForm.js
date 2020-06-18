@@ -37,12 +37,12 @@ class FilterForm extends React.Component {
         id="filter"
         onSubmit={this.updateTimeline}
       >
-      <label>Topic: <input
+      <label id="topic">Topic: <input
           tabIndex="1"
           type="text"
           value={this.props.topic}
           onChange={this.updateTopic}
-          placeholder="web, Python, OOP..."
+          placeholder="OOP, Lisp, JVM..."
           list="topics"
         />
       </label>

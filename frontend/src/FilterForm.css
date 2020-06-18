@@ -1,7 +1,7 @@
 /* form that allows to filter the timeline */
 #filter {
-  background-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
   transition: padding-top 0.4s;
   text-align: center;
   padding: 2em 8%;
@@ -37,6 +37,11 @@
 #filter > label > input {
   background-color: inherit;
   border: none;
+}
+
+/* extra space between the label and the main topic */
+#topic > input {
+  padding-left: 0.4em;
 }
 
 /* responsive form on small screens */
