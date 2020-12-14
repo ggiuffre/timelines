@@ -1,3 +1,5 @@
+**Note**: I turned this project into a [static web app](https://github.com/ggiuffre/timelangs).
+
 # timelines
 
 A web app about the history of programming languages: relevant languages are displayed on a timeline and can be filtered by tag. Example tags are `#OOP`, `#web`, `#Python`, and `#zero-indexed`.
